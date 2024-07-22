@@ -16,8 +16,10 @@ load_dotenv()
 
 nest_asyncio.apply()
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-DEEPGRAM_API_KEY = os.getenv("DEEPGRAM_API_KEY")
+OPENAI_API_KEY="sk-proj-5P3MWPnvt1RBaqizoETIT3BlbkFJlCyFpBktBwQk6NFhDgGT"
+openai.api_key = OPENAI_API_KEY
+DEEPGRAM_API_KEY="c47a78eb1a09b7c157c4f95d1a48392b5876df41"
+DEEPGRAM_API_KEY = DEEPGRAM_API_KEY
 deepgram = Deepgram(DEEPGRAM_API_KEY)
 
 @app.route('/transcribe', methods=['POST'])
